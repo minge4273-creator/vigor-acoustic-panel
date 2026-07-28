@@ -41,7 +41,8 @@ html {
 body {
   font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
   color: var(--color-text);
-  background: var(--color-bg);
+  /* [修改] 原为 background: var(--color-bg); 改为透明，使底层360全景图能够透出全屏显示 */
+  background: transparent; 
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -164,16 +165,19 @@ input, textarea, select { font-family: inherit; outline: none; }
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--color-primary);
+  /* [修改] 移除原有的 var(--color-primary) 纯色背景，使底下的画布内容无遮挡 */
+  background: transparent; 
 }
 
 #three-canvas {
-  position: absolute;
+  /* [修改] 绝对定位改为固定定位(fixed)，使其不论怎么滚动都固定在屏幕上铺满 */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* [修改] 将层级降到最低，充当网页全局背景 */
+  pointer-events: none; /* [修改] 重点：允许鼠标点击穿透画布，这样就不会导致网页按钮无法点击 */
 }
 
 .hero-overlay {
@@ -276,10 +280,13 @@ input, textarea, select { font-family: inherit; outline: none; }
 /* --- Section Common --- */
 .section {
   padding: 100px 0;
+  /* [修改] 为常规区块添加半透明白色背景，以便文字清晰可读，同时隐约透出下方的3D房间 */
+  background: rgba(248, 247, 244, 0.85); 
 }
 
 .section-dark {
-  background: var(--color-primary);
+  /* [修改] 将原来的 var(--color-primary) 深色改为半透明深色，维持网站氛围并透出背景 */
+  background: rgba(26, 26, 46, 0.9);
   color: #fff;
 }
 
@@ -576,7 +583,8 @@ input, textarea, select { font-family: inherit; outline: none; }
 
 /* --- Products Page --- */
 .page-hero {
-  background: var(--color-primary);
+  /* [修改] 将原来的 var(--color-primary) 改为半透明，透出全屏背景 */
+  background: rgba(26, 26, 46, 0.9);
   padding: 140px 0 80px;
   text-align: center;
   position: relative;
@@ -1147,7 +1155,8 @@ input, textarea, select { font-family: inherit; outline: none; }
 
 /* --- Footer --- */
 .footer {
-  background: var(--color-primary);
+  /* [修改] 将原来的 var(--color-primary) 改为带有 0.95 不透明度的背景，完美融入沉浸式背景 */
+  background: rgba(26, 26, 46, 0.95);
   color: rgba(255,255,255,0.7);
   padding: 60px 0 30px;
 }
