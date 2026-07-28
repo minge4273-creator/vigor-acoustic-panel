@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Detail — Suzhou Vigor New Materials Co., Ltd.</title>
+  <meta name="description" content="Detailed product information, specifications, and inquiry options for Suzhou Vigor acoustic panels.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header scrolled">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">SV</div>
+        <span>Suzhou Vigor</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="nav-cta">Inquiry</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Product Detail -->
+  <div id="product-detail-container">
+    <div class="product-detail">
+      <div class="container">
+        <a href="products.html" class="back-link">← Back to Products</a>
+
+        <div class="product-detail-grid">
+          <!-- Gallery -->
+          <div class="product-gallery">
+            <div class="product-main-img" id="product-main-img">
+              <span id="product-icon" style="position:relative;z-index:1;font-size:5rem;">🪵</span>
+            </div>
+            <div class="product-thumbnails" id="product-thumbnails">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-info">
+            <span class="category-tag" id="product-category">Wood Veneer Series</span>
+            <h1 id="product-name">Wood Veneer Acoustic Panel</h1>
+            <p class="product-description" id="product-description"></p>
+
+            <table class="specs-table" id="specs-table">
+              <!-- Rendered by JS -->
+            </table>
+
+            <div class="product-actions">
+              <a href="contact.html" class="btn btn-primary">Send Inquiry</a>
+              <a href="#" id="whatsapp-product-link" class="btn btn-outline" style="color:var(--color-primary);border-color:var(--color-primary);">WhatsApp Inquiry</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="detail-tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab('features')">Features</button>
+            <button class="tab-btn" onclick="switchTab('details')">Details</button>
+            <button class="tab-btn" onclick="switchTab('specs')">Specifications</button>
+          </div>
+
+          <div class="tab-content active" id="tab-features">
+            <div class="detail-features" id="detail-features">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-details">
+            <p id="detail-description"></p>
+          </div>
+
+          <div class="tab-content" id="tab-specs">
+            <table class="specs-table" id="full-specs-table">
+              <!-- Same as above specs -->
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Suzhou Vigor New Materials Co., Ltd.</h3>
+          <p>Premium acoustic panel manufacturer for commercial and residential applications worldwide.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="product-detail.html?id=wood-veneer">Wood Veneer Series</a>
+          <a href="product-detail.html?id=ps-salt">PS Salt Series</a>
+          <a href="product-detail.html?id=hexagon-wood">Hexagon Series</a>
+          <a href="product-detail.html?id=curved-flexible">Curved Series</a>
+          <a href="product-detail.html?id=special-shape">Special Shape Series</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="products.html">All Products</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:info@csvigor.com">info@csvigor.com</a>
+          <a href="tel:+8651225282160">0512-52828160</a>
+          <a href="tel:+8613812831131">+86 13812831131</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Suzhou Vigor New Materials Co., Ltd. All rights reserved.</p>
+        <p><a href="https://www.csvigor.com" target="_blank">www.csvigor.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
